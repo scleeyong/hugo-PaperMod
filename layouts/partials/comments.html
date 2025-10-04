@@ -18,9 +18,9 @@
 
 <!-- Twikoo -->
 <div>
-    <details class="comments_details">
+    <details class="comments_details" open>
         <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
-            <span style="font-size: 20px;color: var(--content);">...</span>
+            <span style="font-size: 20px;color: var(--content);"> 💬 </span>
         </summary>
         <div id="tcomment"></div>
     </details>
@@ -28,11 +28,11 @@
     </script>
     <script>
         twikoo.init({
-            envId: {{ .Site.Params.twikoo.id }},
-        el: "#tcomment",
-            lang: 'zh-CN',
-            region: {{ .Site.Params.twikoo.region }},
-        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+          envId: "{{ .Site.Params.twikoo.id }}",
+          el: "#tcomment",
+          lang: "zh-CN",
+          region: "{{ .Site.Params.twikoo.region }}",
+          path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
         })
     </script>
 </div>
